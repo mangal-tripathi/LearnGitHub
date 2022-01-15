@@ -25,7 +25,7 @@ BEGIN
  WHERE mis_l.WEEK_WID = 202220211010 and trim(upper(nvl(to_char(mis_l.'|| column_names(r)|| '),''X'')))!= trim(upper(nvl(to_char(m.'|| column_names(r) || '),''X'')))';
  
 EXECUTE IMMEDIATE v_sql INTO v_count;
--- DBMS_OUTPUT.PUT_LINE (v_sql);
+
  dbms_output.put_line('COLUMN '
  || column_names(r)
  || ' has differences: '
